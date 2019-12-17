@@ -28,6 +28,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/vue-social-sharing.js', ssr: true }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -55,6 +56,7 @@ export default {
   ** Build configuration
   */
   build: {
+    vendor: ['vue-social-sharing'],
     /*
     ** You can extend webpack config here
     */

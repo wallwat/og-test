@@ -24,6 +24,28 @@
           GitHub
         </a>
       </div>
+      <div
+        style="margin: 30px;cursor: pointer;"
+      >
+        <social-sharing
+          url="https://desolate-fjord-33890.herokuapp.com/"
+          :title="title"
+          description="social-sharing description"
+          inline-template
+        >
+          <div>
+            <network network="facebook">
+              Facebook
+            </network>
+            <network network="line">
+              Line
+            </network>
+            <network network="twitter">
+              Twitter
+            </network>
+          </div>
+          </social-sharing>
+      </div>
     </div>
   </div>
 </template>
