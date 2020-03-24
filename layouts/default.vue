@@ -4,6 +4,34 @@
   </div>
 </template>
 
+<script>
+export default {
+  data () {
+    return {
+      title: 'default page'
+    }
+  },
+  mounted () {
+    this.$nextTick(async () => {
+      this.liff = window.liff
+      const liffId = '1553887502-4Dop0qr8'
+      await this.liff.init({ liffId }, async () => {
+        try {
+          if (!this.liff.isLoggedIn()) {
+            this.liff.login({ redirectUri: 'http://localhost.com:3000' })
+          } else {
+            const profile = await this.liff.getProfile()
+            this.$store.commit('updateProfile', profile)
+          }
+        } catch (e) {
+          console.log(e)
+        }
+      })
+    })
+  }
+}
+</script>
+
 <style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',

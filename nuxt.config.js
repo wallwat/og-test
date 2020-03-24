@@ -13,7 +13,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    script: [{
+      src: 'https://line-objects-internal.com/assets/liff/edge/2.1/sdk.js'
+    }]
   },
   /*
   ** Customize the progress-bar color

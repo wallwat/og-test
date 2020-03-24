@@ -1,50 +1,78 @@
 <template>
   <div class="container">
     <div>
+      <h2 class="subtitle">
+        Nuxt.js project
+      </h2>
       <logo />
       <h1 class="title">
-        og-test
+        OG
       </h1>
       <h2 class="subtitle">
-        My marvelous Nuxt.js project
+        Test social-sharing and OG content
       </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-      <div
-        style="margin: 30px;cursor: pointer;"
-      >
+      <div>
         <social-sharing
-          url="https://desolate-fjord-33890.herokuapp.com/"
           :title="title"
+          url="https://desolate-fjord-33890.herokuapp.com/"
           description="social-sharing description"
           inline-template
         >
           <div>
             <network network="facebook">
-              Facebook
+              <a class="button--green" style="margin-bottom: 15px;">
+                Facebook
+              </a>
             </network>
             <network network="line">
-              Line
+              <a class="button--green" style="margin-bottom: 15px;">
+                Line
+              </a>
             </network>
             <network network="twitter">
-              Twitter
+              <a class="button--green" style="margin-bottom: 15px;">
+                Twitter
+              </a>
             </network>
           </div>
-          </social-sharing>
+        </social-sharing>
+      </div>
+      <hr style="margin-bottom: 30px;">
+      <h1 class="title">
+        PASS LIFF Login
+      </h1>
+      <h2 class="subtitle">
+        Test pass user LIFF to storefront and new login flow (Alpha)
+      </h2>
+      <div style="display: flex; flex-direction: column; max-width: 200px; margin: 0 auto;">
+        <a
+          href="lineb://app/1553887502-Y8G7rOwa?page=@096zenyh"
+          target="_blank"
+          class="button--grey"
+          style="margin: 0 0 10px 0"
+        >
+          Go to ShopEnd
+        </a>
+        <a
+          href="lineb://app/1553887502-Y8G7rOwa?page=@096zenyh/product/100845842"
+          target="_blank"
+          class="button--grey"
+          style="margin: 0 0 10px 0"
+        >
+          Go to ProductEnd
+        </a>
+        <a
+          href="lineb://app/1553887502-Y8G7rOwa?page=my"
+          target="_blank"
+          class="button--grey"
+          style="margin: 0 0 10px 0"
+        >
+          Go to Profile
+        </a>
+      </div>
+      <div style="display: flex; justify-content: center; align-items: center;">
+        Logged in User : {{ $store.state.profile.displayName }}
+        <img :src="$store.state.profile.pictureUrl" style="border-radius: 100%; width: 40px; margin-left: 10px;">
       </div>
     </div>
   </div>
@@ -84,7 +112,7 @@ export default {
 
 <style>
 .container {
-  margin: 0 auto;
+  margin: 30px auto;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -97,14 +125,14 @@ export default {
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 50px;
   color: #35495e;
   letter-spacing: 1px;
 }
 
 .subtitle {
   font-weight: 300;
-  font-size: 42px;
+  font-size: 22px;
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
