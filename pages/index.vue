@@ -47,7 +47,6 @@
       <div style="display: flex; flex-direction: column; max-width: 200px; margin: 0 auto;">
         <a
           href="https://shop-alpha.line-beta.me/@096zenyh"
-          target="_blank"
           class="button--grey"
           style="margin: 0 0 10px 0"
         >
@@ -55,7 +54,6 @@
         </a>
         <a
           href="https://shop-alpha.line-beta.me/@096zenyh/product/100845842"
-          target="_blank"
           class="button--grey"
           style="margin: 0 0 10px 0"
         >
@@ -63,7 +61,6 @@
         </a>
         <a
           href="https://shop-alpha.line-beta.me/my"
-          target="_blank"
           class="button--grey"
           style="margin: 0 0 10px 0"
         >
