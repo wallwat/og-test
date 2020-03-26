@@ -18,8 +18,8 @@ export default {
       await this.liff.init({ liffId }, async () => {
         try {
           if (!this.liff.isLoggedIn()) {
-            // this.liff.login({ redirectUri: 'https://demo-nuxt-liff1.herokuapp.com/' })
-            this.liff.login({ redirectUri: 'http://localhost.com:3000' })
+            this.liff.login({ redirectUri: 'https://demo-nuxt-liff1.herokuapp.com/' })
+            // this.liff.login({ redirectUri: 'http://localhost.com:3000' })
           } else {
             const profile = await this.liff.getProfile()
             this.$store.commit('updateProfile', profile)
