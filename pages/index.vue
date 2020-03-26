@@ -44,6 +44,10 @@
       <h2 class="subtitle">
         Test pass user LIFF to storefront and new login flow (Alpha)
       </h2>
+      <div style="display: flex; justify-content: center; align-items: center;margin-bottom: 20px; height: 40px;">
+        Logged in User : {{ $store.state.profile.displayName }}
+        <img :src="$store.state.profile.pictureUrl" style="border-radius: 100%; width: 40px; margin-left: 10px;">
+      </div>
       <div style="display: flex; flex-direction: column; max-width: 200px; margin: 0 auto;">
         <a
           href="https://shop-alpha.line-beta.me/@096zenyh"
@@ -66,10 +70,36 @@
         >
           Go to Profile
         </a>
-      </div>
-      <div style="display: flex; justify-content: center; align-items: center;">
-        Logged in User : {{ $store.state.profile.displayName }}
-        <img :src="$store.state.profile.pictureUrl" style="border-radius: 100%; width: 40px; margin-left: 10px;">
+
+        <a
+          href="https://shop-alpha.line-beta.me/@096zenyh?utm_source=lineshopping&utm_campaign=sale-sale-2020&utm_medium=coupon&utm_term=term&utm_content=fromshopendpage"
+          class="button--grey"
+          style="margin: 10px 0 10px 0"
+        >
+          Go to ShopEnd + UTM
+        </a>
+        <a
+          href="https://shop-alpha.line-beta.me/@096zenyh/product/100845842?utm_source=lineshopping&utm_campaign=sale-sale-2020&utm_medium=coupon&utm_term=term&utm_content=fromproductendpage"
+          class="button--grey"
+          style="margin: 0 0 10px 0"
+        >
+          Go to ProductEnd + UTM
+        </a>
+
+        <a
+          href="lineb://app/1553887502-Y8G7rOwa?page=@096zenyh"
+          class="button--green"
+          style="margin: 10px 0 10px 0"
+        >
+          Open liff ShopEnd
+        </a>
+        <a
+          href="lineb://app/1553887502-Y8G7rOwa?page=@096zenyh&utm_source=lineshopping&utm_campaign=sale-sale-2020&utm_medium=coupon&utm_term=term&utm_content=openliffurlf"
+          class="button--green"
+          style="margin: 0px 0 10px 0"
+        >
+          Open liff ShopEnd + UTM
+        </a>
       </div>
     </div>
   </div>
