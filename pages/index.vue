@@ -50,21 +50,21 @@
       </div>
       <div style="display: flex; flex-direction: column; max-width: 200px; margin: 0 auto;">
         <a
-          href="https://shop-alpha.line-beta.me/@096zenyh"
+          href="https://shop-alpha.line-beta.me/@096zenyh?passLogin"
           class="button--grey"
           style="margin: 0 0 10px 0"
         >
           Go to ShopEnd
         </a>
         <a
-          href="https://shop-alpha.line-beta.me/@096zenyh/product/100845842"
+          href="https://shop-alpha.line-beta.me/@096zenyh/product/100845842?passLogin"
           class="button--grey"
           style="margin: 0 0 10px 0"
         >
           Go to ProductEnd
         </a>
         <a
-          href="https://shop-alpha.line-beta.me/my"
+          href="https://shop-alpha.line-beta.me/my?passLogin"
           class="button--grey"
           style="margin: 0 0 10px 0"
         >
@@ -72,14 +72,14 @@
         </a>
 
         <a
-          href="https://shop-alpha.line-beta.me/@096zenyh?utm_source=lineshopping&utm_campaign=sale-sale-2020&utm_medium=coupon&utm_term=term&utm_content=fromshopendpage"
+          href="https://shop-alpha.line-beta.me/@096zenyh?utm_source=lineshopping&utm_campaign=sale-sale-2020&utm_medium=coupon&utm_term=term&utm_content=fromshopendpage&passLogin"
           class="button--grey"
           style="margin: 10px 0 10px 0"
         >
           Go to ShopEnd + UTM
         </a>
         <a
-          href="https://shop-alpha.line-beta.me/@096zenyh/product/100845842?utm_source=lineshopping&utm_campaign=sale-sale-2020&utm_medium=coupon&utm_term=term&utm_content=fromproductendpage"
+          href="https://shop-alpha.line-beta.me/@096zenyh/product/100845842?utm_source=lineshopping&utm_campaign=sale-sale-2020&utm_medium=coupon&utm_term=term&utm_content=fromproductendpage&passLogin"
           class="button--grey"
           style="margin: 0 0 10px 0"
         >
