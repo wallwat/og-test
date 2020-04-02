@@ -189,7 +189,7 @@ export default {
   data () {
     return {
       title: 'OG TEST!',
-      version: 1
+      version: ''
     }
   },
   head () {
@@ -209,8 +209,12 @@ export default {
       ]
     }
   },
+  mounted () {
+    this.version = localStorage.getItem('version')
+  },
   methods: {
     changeVersion (ver) {
+      localStorage.setItem('version', ver)
       this.version = ver
     }
   }
