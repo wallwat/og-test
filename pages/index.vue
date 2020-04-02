@@ -11,7 +11,7 @@
       <h2 class="subtitle">
         Test social-sharing and OG content
       </h2>
-      <div>
+      <div style="">
         <social-sharing
           :title="title"
           url="https://desolate-fjord-33890.herokuapp.com/"
@@ -48,7 +48,81 @@
         Logged in User : {{ $store.state.profile.displayName }}
         <img :src="$store.state.profile.pictureUrl" style="border-radius: 100%; width: 40px; margin-left: 10px;">
       </div>
-      <div style="display: flex; flex-direction: column; max-width: 200px; margin: 0 auto;">
+      <div style="text-align: left; margin-bottom: 10px;">
+        <a
+          class="button--green"
+          :class="{'button--green-active': version == 1}"
+          @click="changeVersion(1)"
+          style="width: 50px; padding: 6px; text-align: center;"
+        >
+          V.1
+        </a>
+        <a
+          class="button--green"
+          :class="{'button--green-active': version == 2}"
+          @click="changeVersion(2)"
+          style="width: 50px; padding: 6px; text-align: center; margin-left: 10px;"
+        >
+          V.2
+        </a>
+      </div>
+      <hr style="margin-bottom: 30px;">
+
+      <div v-if="version==1" style="display: flex; flex-direction: column; max-width: 200px; margin: 0 auto;">
+        <a
+          href="https://shop-beta.line-beta.me/@266sntiy"
+          class="button--grey"
+          style="margin: 0 0 10px 0"
+        >
+          Go to ShopEnd
+        </a>
+        <a
+          href="https://shop-beta.line-beta.me/@266sntiy/product/101001901"
+          class="button--grey"
+          style="margin: 0 0 10px 0"
+        >
+          Go to ProductEnd
+        </a>
+        <a
+          href="https://shop-beta.line-beta.me/my"
+          class="button--grey"
+          style="margin: 0 0 10px 0"
+        >
+          Go to Profile
+        </a>
+
+        <a
+          href="https://shop-beta.line-beta.me/@266sntiy?utm_source=lineshopping&utm_campaign=sale-sale-2020&utm_medium=coupon&utm_term=term&utm_content=fromshopendpage&passLogin"
+          class="button--grey"
+          style="margin: 10px 0 10px 0"
+        >
+          Go to ShopEnd + UTM
+        </a>
+        <a
+          href="https://shop-beta.line-beta.me/@266sntiy/product/100845842?utm_source=lineshopping&utm_campaign=sale-sale-2020&utm_medium=coupon&utm_term=term&utm_content=fromproductendpage&passLogin"
+          class="button--grey"
+          style="margin: 0 0 10px 0"
+        >
+          Go to ProductEnd + UTM
+        </a>
+
+        <a
+          href="lineb://app/1553887502-7yeqzwWY?page=@266sntiy"
+          class="button--green"
+          style="margin: 10px 0 10px 0"
+        >
+          Open liff ShopEnd
+        </a>
+        <a
+          href="lineb://app/1553887502-7yeqzwWY?page=@266sntiy&utm_source=lineshopping&utm_campaign=sale-sale-2020&utm_medium=coupon&utm_term=term&utm_content=openliffurlf"
+          class="button--green"
+          style="margin: 0px 0 10px 0"
+        >
+          Open liff ShopEnd + UTM
+        </a>
+      </div>
+
+      <div v-if="version==2" style="display: flex; flex-direction: column; max-width: 200px; margin: 0 auto;">
         <a
           href="https://shop-alpha.line-beta.me/@096zenyh?passLogin"
           class="button--grey"
@@ -114,7 +188,8 @@ export default {
   },
   data () {
     return {
-      title: 'OG TEST!'
+      title: 'OG TEST!',
+      version: 1
     }
   },
   head () {
@@ -133,6 +208,11 @@ export default {
         { hid: 'twitter:description', name: 'twitter:description', content: 'My custom description' }
       ]
     }
+  },
+  methods: {
+    changeVersion (ver) {
+      this.version = ver
+    }
   }
 }
 </script>
@@ -145,6 +225,7 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 0 20px;
 }
 
 .title {
@@ -163,6 +244,7 @@ export default {
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
+  padding-top: 15px;
 }
 
 .links {

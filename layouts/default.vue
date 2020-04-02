@@ -67,6 +67,11 @@ html {
   background-color: #3b8070;
 }
 
+.button--green-active {
+  color: #fff;
+  background-color: #3b8070;
+}
+
 .button--grey {
   display: inline-block;
   border-radius: 4px;
@@ -78,6 +83,11 @@ html {
 }
 
 .button--grey:hover {
+  color: #fff;
+  background-color: #35495e;
+}
+
+.button--grey-active {
   color: #fff;
   background-color: #35495e;
 }
